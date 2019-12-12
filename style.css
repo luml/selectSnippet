@@ -1,0 +1,11 @@
+body {
+    background: rgb(63, 60, 29);
+}
+div {
+    display: flex;
+    justify-content: center;
+}
+select {
+    margin: auto;
+    font-size: 4em;
+}
