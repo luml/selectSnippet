@@ -1,23 +1,39 @@
-let divDom = document.createElement("div");
-divDom.style.color = "white";
+let articleDom = document.createElement("article");
+let articleJs = document.createElement("article");
+articleDom.style.color = "white";
 const target = document.getElementById("findTarget");
+const contentFill = document.querySelector(".content");
+
+const demodom1 = `<div class='demo' id='demo'>
+                <ul>
+                  <li>baseball</li>
+                  <li class='li-2'>tennis</li>
+                  <li>soccer</li>
+                </ul>
+              </div>`;
+const demojs1 = `document.querySelector('div ul li.li-2')`;
+const demojs2 = `document.querySelectorAll('div ul li')`;
+const demojs3 = `document.getElementById('demo').classList.remove('demo')`;
+const demojs4 = `document.querySelector('div ul li.li-2').innerHTML = '<p>soccer is the best</p>'`;
 
 target.onchange = function() {
-  console.log(target.value);
+  articleDom.innerText = demodom1;
+  articleJs.style.color = "deeppink";
   switch (target.value) {
     case "1":
-      divDom.innerText = `demo #001`;
+      articleJs.innerText = demojs1;
       break;
     case "2":
-      divDom.innerText = `demo #002`;
+      articleJs.innerText = demojs2;
       break;
     case "3":
-      divDom.innerText = `demo #003`;
+      articleJs.innerText = demojs3;
       break;
     case "4":
-      divDom.innerText = `demo #004`;
+      articleJs.innerText = demojs4;
       break;
     default:
   }
-  target.parentElement.insertAdjacentElement("afterend", divDom);
+  contentFill.insertAdjacentElement("beforeend", articleDom);
+  articleDom.insertAdjacentElement("afterend", articleJs);
 };

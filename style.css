@@ -1,11 +1,17 @@
 body {
-    background: rgb(63, 60, 29);
+    background: rgb(199, 191, 108);
 }
 div {
     display: flex;
     justify-content: center;
 }
 select {
+    width: 1000px;
     margin: auto;
     font-size: 4em;
+}
+.content {
+    padding: 1em;
+    margin: 2em;
+    justify-content: space-evenly;
 }
