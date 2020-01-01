@@ -2,16 +2,22 @@ body {
     background: rgb(199, 191, 108);
 }
 div {
+    font-style: italic;
+    font-size: smaller;
+    max-width: 70vw;
+    width: 600px;
+    margin: auto;
     display: flex;
     justify-content: center;
 }
 select {
-    width: 1000px;
     margin: auto;
-    font-size: 4em;
+    font-size: 3em;
 }
 .content {
+    display: flex;
     padding: 1em;
-    margin: 2em;
+    margin: auto;
+    margin-top: 2rem;
     justify-content: space-evenly;
 }

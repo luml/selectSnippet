@@ -37,3 +37,7 @@ target.onchange = function() {
   contentFill.insertAdjacentElement("beforeend", articleDom);
   articleDom.insertAdjacentElement("afterend", articleJs);
 };
+
+window.addEventListener('load', function(){
+  alert("Pick up from select");
+})
