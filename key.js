@@ -41,3 +41,16 @@ target.onchange = function() {
 window.addEventListener('load', function(){
   alert("Pick up from select");
 })
+
+document.addEventListener("keydown",toggleSelectList);
+
+function toggleSelectList(event) {
+  if(document.hasFocus()){
+    console.log("select has been selected");
+    if(event.key === 'Enter' && event.srcElement.nodeName === 'SELECT'){
+      console.log("Enter keyborad got hit");
+      // automaticlly select first item, show off the select curtain
+      // Tip: There's no need to do the work, Keyboard users can hit Up or Down after select element focused(hit tab)
+    }
+  }
+}
