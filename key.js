@@ -5,12 +5,12 @@ const target = document.getElementById("findTarget");
 const contentFill = document.querySelector(".content");
 
 const demodom1 = `<div class='demo' id='demo'>
-                <ul>
-                  <li>baseball</li>
-                  <li class='li-2'>tennis</li>
-                  <li>soccer</li>
-                </ul>
-              </div>`;
+                    <ul>
+                      <li>baseball</li>
+                      <li class='li-2'>tennis</li>
+                      <li>soccer</li>
+                    </ul>
+                  </div>`;
 const demojs1 = `document.querySelector('div ul li.li-2')`;
 const demojs2 = `document.querySelectorAll('div ul li')`;
 const demojs3 = `document.getElementById('demo').classList.remove('demo')`;

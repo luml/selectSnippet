@@ -1,5 +1,5 @@
 body {
-    background: rgb(199, 191, 108);
+    background: rgb(109, 70, 11);
 }
 div {
     font-style: italic;
@@ -23,4 +23,11 @@ select {
     margin-top: 2rem;
     justify-content: space-evenly;
     font-size: larger;
+}
+.content article:first-of-type {
+    width: 30%;
+}
+
+.content article:last-of-type {
+    width: 65%;
 }
