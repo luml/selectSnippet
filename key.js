@@ -15,6 +15,12 @@ const demojs1 = `document.querySelector('div ul li.li-2')`;
 const demojs2 = `document.querySelectorAll('div ul li')`;
 const demojs3 = `document.getElementById('demo').classList.remove('demo')`;
 const demojs4 = `document.querySelector('div ul li.li-2').innerHTML = '<p>soccer is the best</p>'`;
+const demojs5 = `
+                  let node = document.createElement("option");
+                  node.innerHTML = "appendChild";
+                  node.value = 5;
+                  document.querySelector('div ul').appendChild(node);
+                `;
 
 target.onchange = function() {
   articleDom.innerText = demodom1;
@@ -32,6 +38,8 @@ target.onchange = function() {
     case "4":
       articleJs.innerText = demojs4;
       break;
+    case "5":
+      articleJs.innerText = demojs5;
     default:
   }
   contentFill.insertAdjacentElement("beforeend", articleDom);
