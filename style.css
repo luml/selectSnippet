@@ -1,11 +1,10 @@
 body {
-    background: rgb(109, 70, 11);
+    background: rgba(109, 70, 11, 1);
 }
 div {
     font-style: italic;
     font-size: smaller;
     max-width: 70vw;
-    width: 600px;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -30,4 +29,5 @@ select {
 
 .content article:last-of-type {
     width: 65%;
+    text-align: right;
 }

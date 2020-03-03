@@ -24,7 +24,7 @@ const demojs5 = `
 
 target.onchange = function() {
   articleDom.innerText = demodom1;
-  articleJs.style.color = "deeppink";
+  articleJs.style.color = "#0dec7b";
   switch (target.value) {
     case "1":
       articleJs.innerText = demojs1;
