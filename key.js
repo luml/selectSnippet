@@ -22,6 +22,10 @@ const demojs5 = `
                   document.querySelector('div ul').appendChild(node);
                 `;
 
+const demojs6 = `<div><a href="https://grrr.tech/posts/create-dom-node-from-html-string/"></a></div>`;
+const demojs7 = `<div><a href="https://grrr.tech/posts/create-dom-node-from-html-string/"></a></div>`;
+
+
 target.onchange = function() {
   articleDom.innerText = demodom1;
   articleJs.style.color = "#0dec7b";
@@ -40,6 +44,10 @@ target.onchange = function() {
       break;
     case "5":
       articleJs.innerText = demojs5;
+    case "6":
+      articleJs.innerText = new DOMParser().parseFromString(demojs6, 'text/html').body.firstElementChild;
+    case "7":
+      articleJs.innerText = document.createRange().createContextualFragment(demojs7).firstElementChild;
     default:
   }
   contentFill.insertAdjacentElement("beforeend", articleDom);
