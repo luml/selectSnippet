@@ -23,7 +23,7 @@ const demojs5 = `
                 `;
 
 const demojs6 = `<div><a href="https://grrr.tech/posts/create-dom-node-from-html-string/"></a></div>`;
-const demojs7 = `<div><a href="https://grrr.tech/posts/create-dom-node-from-html-string/"></a></div>`;
+const demojs7 = `<div><p>See more at https://grrr.tech/posts/create-dom-node-from-html-string/</p></div>`;
 
 
 target.onchange = function() {
@@ -45,9 +45,12 @@ target.onchange = function() {
     case "5":
       articleJs.innerText = demojs5;
     case "6":
-      articleJs.innerText = new DOMParser().parseFromString(demojs6, 'text/html').body.firstElementChild;
+      const divDom6 = new DOMParser().parseFromString(demojs6, 'text/html').body.firstElementChild;
+      articleJs.innerText = divDom6.nodeName + ">" + divDom6.firstElementChild.nodeName;
+      break;
     case "7":
-      articleJs.innerText = document.createRange().createContextualFragment(demojs7).firstElementChild;
+      const divDom7 = document.createRange().createContextualFragment(demojs7).firstElementChild;
+      articleJs.innerText = divDom7.nodeName + ">" + divDom7.firstElementChild.nodeName
     default:
   }
   contentFill.insertAdjacentElement("beforeend", articleDom);
