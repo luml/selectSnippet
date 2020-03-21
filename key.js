@@ -46,11 +46,11 @@ target.onchange = function() {
       articleJs.innerText = demojs5;
     case "6":
       const divDom6 = new DOMParser().parseFromString(demojs6, 'text/html').body.firstElementChild;
-      articleJs.innerText = divDom6.nodeName + ">" + divDom6.firstElementChild.nodeName;
+      articleJs.innerText = `You just created ` + divDom6.nodeName + ">" + divDom6.firstElementChild.nodeName;
       break;
     case "7":
       const divDom7 = document.createRange().createContextualFragment(demojs7).firstElementChild;
-      articleJs.innerText = divDom7.nodeName + ">" + divDom7.firstElementChild.nodeName
+      articleJs.innerText = `You just created ` +  divDom7.nodeName + ">" + divDom7.firstElementChild.nodeName
     default:
   }
   contentFill.insertAdjacentElement("beforeend", articleDom);
