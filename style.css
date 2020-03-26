@@ -1,5 +1,6 @@
 body {
-    background: rgba(109, 70, 11, 1);
+    --bg: rgba(100, 70, 11, 1);
+    background: var(--bg);
 }
 div {
     font-style: italic;
