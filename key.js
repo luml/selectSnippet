@@ -52,6 +52,7 @@ target.onchange = function() {
       const divDom7 = document.createRange().createContextualFragment(demojs7).firstElementChild;
       articleJs.innerText = `You just created ` +  divDom7.nodeName + ">" + divDom7.firstElementChild.nodeName
     default:
+      articleJs.innerText = `PICK UP YOUR SELECTION`;
   }
   contentFill.insertAdjacentElement("beforeend", articleDom);
   articleDom.insertAdjacentElement("afterend", articleJs);
