@@ -2,6 +2,7 @@ body {
     --bg: rgba(100, 70, 11, 1);
     background: var(--bg);
 }
+
 div {
     font-style: italic;
     font-size: smaller;
@@ -31,4 +32,29 @@ select {
 .content article:last-of-type {
     width: 65%;
     text-align: right;
+}
+
+/* Let's play repeat-text in backgroud, and -moz-element only works for Firefox */
+.hide {
+    overflow: hidden;
+    color: lightgrey;
+}
+.hide ~ div {
+    margin-top: -8em;
+}
+#kittens {
+    font-weight: 200;
+}
+   
+h1 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 50px;
+    opacity: 0.2;
+}
+body {
+    min-height: 100vh;
+    background-image: -moz-element(#versatility);
+    /* background-repeat: repeat-y; */
+    /* background-position: center; */
 }
