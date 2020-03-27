@@ -37,9 +37,9 @@ select {
 /* Let's play repeat-text in backgroud, and -moz-element only works for Firefox */
 .hide {
     overflow: hidden;
-    color: lightgrey;
+    color: black;
 }
-.hide ~ div {
+.hide ~ div:first-of-type {
     margin-top: -8em;
 }
 #kittens {
@@ -50,7 +50,7 @@ h1 {
     text-align: center;
     font-weight: 900;
     font-size: 50px;
-    opacity: 0.2;
+    opacity: 0.1;
 }
 body {
     min-height: 100vh;
