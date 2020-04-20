@@ -58,3 +58,15 @@ body {
     /* background-repeat: repeat-y; */
     /* background-position: center; */
 }
+
+.bubble {
+    padding-bottom: 15px;
+    min-width: 250px;
+    float: right;
+}
+.bubble::after {
+    content: url("data:image/svg+xml; utf8, <svg width='36' height='35' viewBox='0 0 36 35' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M3.00684 1.49023H33.0068' stroke='rgba(100, 70, 11, 1)' stroke-width='4'/><path d='M1.56152 1.49023L8.42899 31.4902L35.176 1.49023' stroke='teal' stroke-width='3'/></svg>");
+    position: relative;
+    bottom: -54px;
+    left: -19%;
+  }

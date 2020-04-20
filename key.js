@@ -44,15 +44,23 @@ target.onchange = function() {
       break;
     case "5":
       articleJs.innerText = demojs5;
+      break
     case "6":
+      articleJs.innerText = ''
       const divDom6 = new DOMParser().parseFromString(demojs6, 'text/html').body.firstElementChild;
-      articleJs.innerText = `You just created ` + divDom6.nodeName + ">" + divDom6.firstElementChild.nodeName;
+      const bubble6 = makeBubble()
+      bubble6.innerText = `You just created ` + divDom6.nodeName + ">" + divDom6.firstElementChild.nodeName;
+      articleJs.appendChild(bubble6)
       break;
     case "7":
+      articleJs.innerText = ''
       const divDom7 = document.createRange().createContextualFragment(demojs7).firstElementChild;
-      articleJs.innerText = `You just created ` +  divDom7.nodeName + ">" + divDom7.firstElementChild.nodeName
+      const bubble7 = makeBubble();
+      bubble7.innerText = `You just created ` +  divDom7.nodeName + ">" + divDom7.firstElementChild.nodeName
+      articleJs.appendChild(bubble7)
+      break
     default:
-      articleJs.innerText = `PICK UP YOUR SELECTION`;
+      console.log('No item selected')
   }
   contentFill.insertAdjacentElement("beforeend", articleDom);
   articleDom.insertAdjacentElement("afterend", articleJs);
@@ -73,4 +81,11 @@ function toggleSelectList(event) {
       // Tip: There's no need to do the work, Keyboard users can hit Up or Down after select element focused(hit tab)
     }
   }
+}
+
+function makeBubble() {
+  const p = document.createElement('p')
+  p.classList.add('bubble')
+  p.style.border = 'solid 2px teal'
+  return p
 }
