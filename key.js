@@ -26,7 +26,7 @@ const demojs6 = `<div><a href="https://grrr.tech/posts/create-dom-node-from-html
 const demojs7 = `<div><p>See more at https://grrr.tech/posts/create-dom-node-from-html-string/</p></div>`;
 
 
-target.onchange = function() {
+target.onchange = function () {
   articleDom.innerText = demodom1;
   articleJs.style.color = "#0dec7b";
   switch (target.value) {
@@ -56,32 +56,38 @@ target.onchange = function() {
       articleJs.innerText = ''
       const divDom7 = document.createRange().createContextualFragment(demojs7).firstElementChild;
       const bubble7 = makeBubble();
-      bubble7.innerText = `You just created ` +  divDom7.nodeName + ">" + divDom7.firstElementChild.nodeName
+      bubble7.innerText = `You just created ` + divDom7.nodeName + ">" + divDom7.firstElementChild.nodeName
       articleJs.appendChild(bubble7)
       break
     default:
-      console.log('No item selected')
+      articleJs.textContent = ''
+      document.querySelector('.pick-dialog').showModal()
+      document.querySelector(".pick-dialog>p").textContent = `No item selected`
   }
-  contentFill.insertAdjacentElement("beforeend", articleDom);
-  articleDom.insertAdjacentElement("afterend", articleJs);
+  contentFill.insertAdjacentElement("beforeend", articleDom)
+  articleDom.insertAdjacentElement("afterend", articleJs)
 };
 
-window.addEventListener('load', function(){
+window.addEventListener('load', function () {
   alert("Pick up from select");
 })
 
-document.addEventListener("keydown",toggleSelectList);
-
+document.addEventListener("keydown", toggleSelectList)
 function toggleSelectList(event) {
-  if(document.hasFocus()){
+  if (document.hasFocus()) {
     console.log("select has been selected");
-    if(event.key === 'Enter' && event.srcElement.nodeName === 'SELECT'){
+    if (event.key === 'Enter' && event.srcElement.nodeName === 'SELECT') {
       console.log("Enter keyborad got hit");
       // automaticlly select first item, show off the select curtain
       // Tip: There's no need to do the work, Keyboard users can hit Up or Down after select element focused(hit tab)
     }
   }
 }
+
+// dialog event
+document.querySelector(".close").addEventListener('click', () => {
+  document.querySelector(".pick-dialog").close()
+})
 
 function makeBubble() {
   const p = document.createElement('p')
