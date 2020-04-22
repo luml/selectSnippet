@@ -3,6 +3,7 @@ let articleJs = document.createElement("article");
 articleDom.style.color = "white";
 const target = document.getElementById("findTarget");
 const contentFill = document.querySelector(".content");
+const pickDialog = document.querySelector('.pick-dialog')
 
 const demodom1 = `<div class='demo' id='demo'>
                     <ul>
@@ -61,8 +62,8 @@ target.onchange = function () {
       break
     default:
       articleJs.textContent = ''
-      document.querySelector('.pick-dialog').showModal()
-      document.querySelector(".pick-dialog>p").textContent = `No item selected`
+      pickDialog.showModal()
+      pickDialog.firstElementChild.textContent = `No item selected`
   }
   contentFill.insertAdjacentElement("beforeend", articleDom)
   articleDom.insertAdjacentElement("afterend", articleJs)
@@ -72,21 +73,19 @@ window.addEventListener('load', function () {
   alert("Pick up from select");
 })
 
-document.addEventListener("keydown", toggleSelectList)
-function toggleSelectList(event) {
+document.addEventListener("keydown", (event) => {
   if (document.hasFocus()) {
-    console.log("select has been selected");
     if (event.key === 'Enter' && event.srcElement.nodeName === 'SELECT') {
       console.log("Enter keyborad got hit");
       // automaticlly select first item, show off the select curtain
       // Tip: There's no need to do the work, Keyboard users can hit Up or Down after select element focused(hit tab)
     }
   }
-}
+})
 
 // dialog event
 document.querySelector(".close").addEventListener('click', () => {
-  document.querySelector(".pick-dialog").close()
+  pickDialog.close()
 })
 
 function makeBubble() {
