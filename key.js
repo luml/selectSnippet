@@ -14,8 +14,17 @@ const demodom1 = `<div class='demo' id='demo'>
                   </div>`;
 const demojs1 = `document.querySelector('div ul li.li-2')`;
 const demojs2 = `document.querySelectorAll('div ul li')`;
-const demojs3 = `document.getElementById('demo').classList.remove('demo')`;
-const demojs4 = `document.querySelector('div ul li.li-2').innerHTML = '<p>soccer is the best</p>'`;
+const demojs3 = `document.getElementById('demo').classList.add('demo')
+                 document.getElementById('demo').classList.toggle('demo')
+                 document.getElementById('demo').classList.remove('demo')
+                 document.getElementById('demo').classList.replace('demo', 'demo1')
+                 document.getElementById('demo').classList.contains('demo1')
+                 document.getElementById('demo').classList.item(0)
+                `;
+const demojs4 = `document.querySelector('div ul li.li-2').innerHTML = '<p>soccer is the best</p>'
+                 document.querySelector('div ul li.li-2').innerText = 'soccer is the best'
+                 document.querySelector('div ul li.li-2').textContent = 'soccer is the best'
+                `;
 const demojs5 = `
                   let node = document.createElement("option");
                   node.innerHTML = "appendChild";
