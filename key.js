@@ -92,7 +92,7 @@ document.addEventListener("keydown", (event) => {
   }
 })
 
-// dialog event
+// dialog event TODO couldn't close
 document.querySelector(".close").addEventListener('click', () => {
   pickDialog.close()
 })

@@ -70,3 +70,9 @@ body {
     bottom: -54px;
     left: -19%;
 }
+
+.pick-dialog {
+    display: grid;
+    place-content: center;
+    height: auto;
+}
