@@ -3,7 +3,7 @@ let articleJs = document.createElement("article");
 articleDom.style.color = "white";
 const target = document.getElementById("findTarget");
 const contentFill = document.querySelector(".content");
-const pickDialog = document.querySelector('.pick-dialog')
+const pickDialog = document.querySelector('.pickDialog')
 
 const demodom1 = `<div class='demo' id='demo'>
                     <ul>
@@ -92,7 +92,6 @@ document.addEventListener("keydown", (event) => {
   }
 })
 
-// dialog event TODO couldn't close
 document.querySelector(".close").addEventListener('click', () => {
   pickDialog.close()
 })
