@@ -18,10 +18,10 @@ class articleMaking {
   }
 }
 
-const arty_1 = new articleMaking("article", "white")
+const arty_1 = new articleMaking("article", "aqua")
 arty_1.colorit()
 
-const arty_2 = new articleMaking("article", "green")
+const arty_2 = new articleMaking("article", "hotPink")
 arty_2.colorit()
 
 const target = document.getElementById("findTarget");
@@ -92,7 +92,9 @@ target.onchange = function () {
       arty_2.dom.appendChild(bubble7)
       break
     default:
+      document.querySelector("button.close").style.visibility = 'visible'
       arty_2.contontIt()
+      // TODO showModal function doesn't work on safari
       pickDialog.showModal()
       pickDialog.firstElementChild.textContent = `No item selected`
   }
