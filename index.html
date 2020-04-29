@@ -28,6 +28,27 @@
       <p></p>
       <button style="visibility: hidden;" class="close" type="reset">Close</button>
     </dialog>
+    <div class="inputList">
+      <input id="input-list" list="interface-list" type="text" placeholder="seach for your wanting">
+      <datalist id="interface-list">
+        <option>pick up your most used</option>
+        <option>document.querySelector</option>
+        <option>document.querySelectorAll</option>
+        <option>classList.add/remove/toggle/replace/contains/item()</option>
+        <option>innerHTML/innerText/textContent</option>
+        <option>appendChild</option>
+        <option>new DOMParser().parseFromString('div', 'text/html')</option>
+        <option>document.createRange().createContextualFragment('div')</option>
+      </datalist>
+      <div class="demo" id="demo" style="visibility: hidden;">
+        <ul>
+          <li>baseball</li>
+          <li class="li-2">tennis</li>
+          <li>soccer</li>
+        </ul>
+      </div>
+      <p></p>
+    </div>
     <script src="./key.js"></script>
   </body>
 </html>

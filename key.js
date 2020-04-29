@@ -129,3 +129,8 @@ function makeBubble() {
   p.style.border = 'solid 2px teal'
   return p
 }
+
+// input datalist
+document.getElementById("input-list").addEventListener('change', (e) => {
+  document.querySelector(".inputList>p").textContent = `${e.target.value}`
+})
