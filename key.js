@@ -21,10 +21,10 @@ class articleMaking {
   }
 }
 
-const arty_1 = new articleMaking("article", "aqua")
+const arty_1 = new articleMaking("article", "black")
 arty_1.colorit()
 
-const arty_2 = new articleMaking("article", "hotPink")
+const arty_2 = new articleMaking("article", "rgb(115, 105, 255)")
 arty_2.colorit()
 
 const target = document.getElementById("findTarget")
