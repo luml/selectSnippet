@@ -13,7 +13,10 @@
        linear-gradient(90deg,var(--maincolor) 30%, transparent 30%,transparent 70%, rgba(78, 90, 143, 0.8) 70%)white;
     
     background-size:60px 60px, 60px 60px, 5px 5px;
+    /* 5px 5px is density */
+
     background-position:0 0, 0 0,0 0;
+    /* Start at top-left corner */
     display:grid;
     animation:bg-shift 10s linear infinite alternate-reverse;
  }
