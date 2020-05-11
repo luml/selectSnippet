@@ -42,6 +42,7 @@ select {
     padding: 1rem;
     margin: auto;
     font-size: 3em;
+    background: linear-gradient(-225deg, beige, green);
 }
 .content {
     display: flex;
@@ -80,7 +81,7 @@ h1 {
 }
 body {
     min-height: 100vh;
-    background-image: -moz-element(#versatility);
+    /* background-image: -moz-element(#versatility); */
     /* background-repeat: repeat-y; */
     /* background-position: center; */
 }
@@ -104,9 +105,9 @@ body {
 
 .inputList > input {
     font-size: large;
-    width: 100%;
     height: 2em;
     border-radius: 0.5em;
+    background: linear-gradient(-225deg, beige, green);
 }
 .inputList > p {
     font-weight: bolder;
